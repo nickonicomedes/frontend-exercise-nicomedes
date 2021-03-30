@@ -1,0 +1,9 @@
+<h1> Employee List </h1>
+<div class="main-container">
+  <div *ngFor="let emp of employees" class="employee-container">
+    <div>Employee ID: {{ emp.id }}</div>
+    <div><span>{{ emp.firstName }}</span><span>{{ emp.lastName }}</span></div>
+    <div>{{ emp.email }}</div>
+    <div><button class="btn btn-outline-primary btn-sm" (click)="delete(emp.id)">Delete</button></div>
+  </div>
+</div>

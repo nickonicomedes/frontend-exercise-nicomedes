@@ -1,0 +1,19 @@
+<form [formGroup]="employeeForm">
+  <div class="form-field">
+    <div>Employee ID</div>
+    <div><input type="text" formControlName="id"></div>
+  </div>
+  <div class="form-field">
+    <div>First Name</div>
+    <div><input type="text" formControlName="firstName"></div>
+  </div>
+  <div class="form-field">
+    <div>Last Name</div>
+    <div><input type="text" formControlName="lastName"></div>
+  </div>
+  <div class="form-field">
+    <div>E-mail</div>
+    <div><input type="email" formControlName="email"></div>
+  </div>
+  <button type="submit" [disabled]="!employeeForm.valid" class="btn btn-primary" (click)="addEmployee()">Submit</button>
+</form>
